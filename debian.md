@@ -2,7 +2,7 @@
 
 ### edit /etc/apt/sources.list add non-free
 
-```bash
+```console
 apt-get install build-essential git
 apt-get install zip unzip unrar gdebi gdebi-core
 apt-get install vim mc
@@ -11,7 +11,7 @@ apt-get install geany geany-plugins
 ```
 
 ## Fonts
-```bash
+```console
 apt-get install fonts-roboto
 ```
 
