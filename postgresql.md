@@ -8,11 +8,13 @@ locate ph_hba.conf
 locate posgtresql.conf
 
 ## Config ph_hba.conf
+```console
 trust	-- no passw
 md5	  -- passwd
 
 local  all   all   			        trust
 host   all   all  127.0.0.1/32  trust
+```
 
 ## Config postgresql.conf
 listen_addresses = '*'
@@ -57,7 +59,7 @@ pg_restore
 ALTER USER my_user_name with password 'my_secure_password';
 
 ## SQL DB Config
-
+```sql
 SELECT * FROM pg_database;
 SELECT * FROM pg_databases;
 SELECT * FROM pg_tablespace;
@@ -70,3 +72,4 @@ SELECT * FROM pg_config;
 
 SELECT table_schema,table_name FROM information_schema.tables
 ORDER BY table_schema,table_name;
+```
