@@ -5,23 +5,22 @@ systemctl status postgresql@10-main
 ps ax | grep postgres | grep -v postgres:
 ```
 
-## Config files
+## Basic Config
 ```shell
+# Find config files
 locate ph_hba.conf
 locate posgtresql.conf
-```
 
-## Config ph_hba.conf
-```shell
+# Config ph_hba.conf
 trust	-- no passw
 md5	  -- passwd
 
 local  all   all   			        trust
 host   all   all  127.0.0.1/32  trust
-```
 
-## Config postgresql.conf
+# Config postgresql.conf
 listen_addresses = '*'
+```
 
 ## PSQL Constring
 ```shell
