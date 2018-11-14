@@ -1,11 +1,15 @@
 ## Systemd Services
+```console
 systemctl { status, start, restart, reload, stop } postgresql.service
 systemctl status postgresql@10-main
 ps ax | grep postgres | grep -v postgres:
+```
 
 ## Config files
+```console
 locate ph_hba.conf
 locate posgtresql.conf
+```
 
 ## Config ph_hba.conf
 ```console
@@ -20,14 +24,19 @@ host   all   all  127.0.0.1/32  trust
 listen_addresses = '*'
 
 ## Constring
+```console
 psql -U postgres -h localhost -p 5432 -d dbname
+```
 
 ## PSQL CLI BD parameters
+```sql
 show server_version;
 show data_directory;
 show all;
+```
 
 ## PSQL CLI - Commands
+```console
 \c db			-- connect to db
 \du+			-- users
 \l+				-- databases
@@ -36,9 +45,10 @@ show all;
 \ds				-- sequences
 \q				-- quit
 \password user	-- change passwd
-
+```
 
 ## Create db 
+```console
 pg_createcluster 9.3 main
 
 ## Drop cluster
@@ -48,15 +58,19 @@ pg_dropcluster 9.3 main
 ## Upgrade cluster
 pg_upgradecluster 9.3 main
 pg_lsclusters 
+```
 
 ## Backup database
+```console
 pg_dump
 pg_dumpall -U postgres -h localhost -p 5432 > dbbkp.dump
 pg_restore
-
+```
 
 ## SQL 
+```sql
 ALTER USER my_user_name with password 'my_secure_password';
+```
 
 ## SQL DB Config
 ```sql
