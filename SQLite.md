@@ -1,4 +1,4 @@
-SQLite Survivor Guide
+# SQLite Survivor Guide
 
 ```shell
 # Install
@@ -43,13 +43,12 @@ select * from xxx;
 # CSV Import
 .mode csv
 .separator "|"
-.import /home/xxx/file.csv  t_table
+.import /home/xxx/file.csv t_table
 
 # CSV Export
 .mode csv
 .header on
 .once /home/xxx/output.csv
-select * from xxx;
 
 # Excel Export
 .excel
