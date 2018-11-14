@@ -23,12 +23,12 @@ host   all   all  127.0.0.1/32  trust
 ## Config postgresql.conf
 listen_addresses = '*'
 
-## Constring
+## PSQL Constring
 ```shell
 psql -U postgres -h localhost -p 5432 -d dbname
 ```
 
-## PSQL CLI BD parameters
+## PSQL CLI DB parameters
 ```sql
 show server_version;
 show data_directory;
@@ -47,20 +47,21 @@ show all;
 \password user	-- change passwd
 ```
 
-## Create db 
+## Cluster 
 ```shell
+# Create Cluster
 pg_createcluster 9.3 main
 
-## Drop cluster
+# Drop cluster
 systemctl stop postgresql 
 pg_dropcluster 9.3 main
 
-## Upgrade cluster
+# Upgrade cluster
 pg_upgradecluster 9.3 main
 pg_lsclusters 
 ```
 
-## Backup database
+## Backup DB
 ```shell
 pg_dump
 pg_dumpall -U postgres -h localhost -p 5432 > dbbkp.dump
