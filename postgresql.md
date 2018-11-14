@@ -6,13 +6,13 @@ ps ax | grep postgres | grep -v postgres:
 ```
 
 ## Config files
-```console
+```shell
 locate ph_hba.conf
 locate posgtresql.conf
 ```
 
 ## Config ph_hba.conf
-```console
+```shell
 trust	-- no passw
 md5	  -- passwd
 
@@ -24,7 +24,7 @@ host   all   all  127.0.0.1/32  trust
 listen_addresses = '*'
 
 ## Constring
-```console
+```shell
 psql -U postgres -h localhost -p 5432 -d dbname
 ```
 
@@ -36,7 +36,7 @@ show all;
 ```
 
 ## PSQL CLI - Commands
-```console
+```shell
 \c db			-- connect to db
 \du+			-- users
 \l+				-- databases
@@ -48,7 +48,7 @@ show all;
 ```
 
 ## Create db 
-```console
+```shell
 pg_createcluster 9.3 main
 
 ## Drop cluster
@@ -61,7 +61,7 @@ pg_lsclusters
 ```
 
 ## Backup database
-```console
+```shell
 pg_dump
 pg_dumpall -U postgres -h localhost -p 5432 > dbbkp.dump
 pg_restore
