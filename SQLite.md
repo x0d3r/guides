@@ -49,6 +49,7 @@ select * from xxx;
 .mode csv
 .header on
 .once /home/xxx/output.csv
+select * from xxx;
 
 # Excel Export
 .excel
