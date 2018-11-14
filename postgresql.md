@@ -12,7 +12,7 @@ locate ph_hba.conf
 locate posgtresql.conf
 
 # Config ph_hba.conf
-trust	-- no passw
+trust	  -- no passw
 md5	  -- passwd
 
 local  all   all   			        trust
