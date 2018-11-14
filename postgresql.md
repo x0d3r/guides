@@ -1,5 +1,5 @@
 ## Systemd Services
-```console
+```shell
 systemctl { status, start, restart, reload, stop } postgresql.service
 systemctl status postgresql@10-main
 ps ax | grep postgres | grep -v postgres:
@@ -78,11 +78,10 @@ SELECT * FROM pg_database;
 SELECT * FROM pg_databases;
 SELECT * FROM pg_tablespace;
 SELECT * FROM pg_settings;
+SELECT * FROM pg_config;
 
 SELECT relname, relfilenode FROM pg_class WHERE relname = <table_name>; 
-SELECT * FROM pg_tablespace;
 SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
-SELECT * FROM pg_config;
 
 SELECT table_schema,table_name FROM information_schema.tables
 ORDER BY table_schema,table_name;
