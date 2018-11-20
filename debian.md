@@ -1,24 +1,35 @@
 ## Debian minimal install
 
-### edit /etc/apt/sources.list add non-free
+```shell
+# edit 
+/etc/apt/sources.list add non-free
 
-```console
-apt-get install build-essential git
+apt-get update
+apt-get install ca-certificates apt-transport-https
+apt-get install build-esential git tmux vim mc
+apt-get install linux-headers-$(uname -r)
+
 apt-get install zip unzip unrar gdebi gdebi-core
-apt-get install vim mc
 apt-get install htop mplayer mpv terminator
 apt-get install geany geany-plugins
-```
 
-## Fonts
-```console
+# Optional 
+apt-get install module-assistant
+m-a prepare
+
+# VirtualBox
+blkid
+mount /dev/sr0 /media/cdrom -t iso9660
+sh /media/cdrom/VBoxLinuxAdditions.run
+
+# Fonts
 apt-get install fonts-roboto
-```
 
-## mucommander
+# mucommander
 http://apt.mucommander.com/
 
-## mpv player
+# mpv player
 vim ~/.config/mpv/mpv.conf
 vim ~/.config/mpv/input.conf
 
+```
