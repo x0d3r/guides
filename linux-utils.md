@@ -12,4 +12,10 @@ hddtemp /dev/sdb
 # Shutdown
 shutdown -c 04:00
 
+# HDD Space
+df -Th
+
+# Ram Use
+free -h 
+
 ```
