@@ -1,4 +1,4 @@
-# Minimal i3wm Guide
+## Minimal i3wm Guide
 
 ```shell
 # Install
@@ -21,10 +21,16 @@ apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev lib
 libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev 
 libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev xutils-dev autoconf
 
-
-https://shrimpworks.za.net/2015/03/29/clean-and-lean-debian-install-with-i3/
-https://i3wm.org/docs/userguide.html#_opening_terminals_and_moving_around
-https://i3wm.org/docs/refcard.html
-https://github.com/jmg-duarte/.i3/blob/master/config
-https://www.reddit.com/r/unixporn/comments/5rw91n/i3gaps_my_installscript_for_i3gaps/
 ```
+
+## Resources
+https://shrimpworks.za.net/2015/03/29/clean-and-lean-debian-install-with-i3/
+
+https://i3wm.org/docs/userguide.html#_opening_terminals_and_moving_around
+
+https://i3wm.org/docs/refcard.html
+
+https://github.com/jmg-duarte/.i3/blob/master/config
+
+https://www.reddit.com/r/unixporn/comments/5rw91n/i3gaps_my_installscript_for_i3gaps/
+
