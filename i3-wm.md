@@ -1,4 +1,4 @@
-## Minimal i3wm Guide
+## Minimal i3-wm Guide
 
 ```shell
 # Install
