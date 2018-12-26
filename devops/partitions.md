@@ -1,4 +1,4 @@
-## Linux Partitions Guide
+## Partitions Guide
 
 ```shell
 # HDD INFO
@@ -32,7 +32,7 @@ sudo chown -R USERNAME:USERNAME /media/bl4ck3d
 e2label /dev/sdb1 /backup
 ```
 
-# Resources
+## Resources
 https://askubuntu.com/questions/684652/how-to-format-an-external-hard-drive-to-ext4
 
 https://tecadmin.net/format-usb-in-linux/
