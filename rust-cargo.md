@@ -2,7 +2,7 @@
 
 ```shell
 ## rustup 
-rustup update
+rustup update stable
 rustc --version
 rustc 
 
