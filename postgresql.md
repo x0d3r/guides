@@ -84,7 +84,9 @@ pg_lsclusters
 ```shell
 pg_dump
 pg_dumpall -U postgres -h localhost -p 5432 > dbbkp.dump
-pg_restore
+
+# Restore from pg_dump file
+pg_restore -h localhost -U postgres -p 5432 -Fc -d postgres data.dump
 ```
 
 ## SQL 
