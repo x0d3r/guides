@@ -1,5 +1,23 @@
 # PostgreSQL Survivor Guide
 
+## Clean install
+```shell
+
+apt-get update
+apt-get install postgresql postgresql-contrib
+```
+
+## Change passw after install
+```shell
+# Using shell
+su postgres
+psql postgres
+\password
+
+# Using psql
+ALTER USER username WITH ENCRYPTED PASSWORD 'password';
+```
+
 ## Systemd Services
 ```shell
 systemctl { status, start, restart, reload, stop } postgresql.service
