@@ -110,3 +110,12 @@ SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
 SELECT table_schema,table_name FROM information_schema.tables
 ORDER BY table_schema,table_name;
 ```
+
+## Resources
+https://www.postgresql.org/docs/11/datatype.html
+
+https://www.postgresql.org/docs/11/sql-createtable.html
+
+http://www.postgresqltutorial.com/postgresql-identity-column/
+
+https://blog.2ndquadrant.com/postgresql-10-identity-columns/
