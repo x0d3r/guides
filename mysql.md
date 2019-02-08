@@ -16,7 +16,7 @@ select user, host from mysql.user;
 ```
 
 ## DDL
-```shell
+```sql
 alter table tname auto_increment = 1;
 ```
 
@@ -27,7 +27,7 @@ mysqlcheck -u root -p --auto-repair --optimize --all-databases
 ```
 
 ## To CSV
-```shell
+```sql
 select * 
 into outfile '/home/user/report.csv' 
 fields terminated by ',' 
