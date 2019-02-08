@@ -1,9 +1,39 @@
 # MySQL Survivor Guide
 
+## Basics
+```shell
+show databases;
+use dbname;
+
+show tables;
+show create table tname;
+show create view tview;
+
+show procedure status;
+show create procedure xxx;
+
+select user, host from mysql.user;
+```
+
+## DDL
+```shell
+alter table tname auto_increment = 1;
+```
+
 ## Repair & Optimize
 ```shell
 mysqlcheck -u root -p --auto-repair --optimize dbname
 mysqlcheck -u root -p --auto-repair --optimize --all-databases
+```
+
+## To CSV
+```shell
+select * 
+into outfile '/home/user/report.csv' 
+fields terminated by ',' 
+enclosed by '"'
+lines terminated by '\n'
+from tname;
 ```
 
 ## Backup
