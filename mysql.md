@@ -2,6 +2,12 @@
 
 ## Basics
 ```shell
+mysql -h localhost -P 3306 -u user
+
+status;
+show status;
+show warnings;
+
 show databases;
 use dbname;
 
@@ -35,6 +41,7 @@ enclosed by '"'
 lines terminated by '\n'
 from tname;
 ```
+
 
 ## Backup
 ```
