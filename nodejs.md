@@ -1,10 +1,15 @@
 ## Node Installation Guide
 
 ```shell
-apt install -y build-essential yarn
-curl -sL https://deb.nodesource.com/setup_8.x | bash -e
-apt install -y nodejs
+add-apt-repository universe
+apt-get install apt-transport-https
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
 
 node -v
 npm -v
+
+npm update
+
 ```
