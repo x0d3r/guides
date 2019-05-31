@@ -1,4 +1,4 @@
-# PostgreSQL Survivor Guide
+# PostgreSQL Guide
 
 ## Clean install
 ```shell
@@ -88,15 +88,15 @@ pg_lsclusters
 psql -h localhost -U user 
 \copy (select field1, field2 from tname) TO '/home/user/report.csv' DELIMITER '|' CSV HEADER
 
--- To CSV
+# To CSV
 psql -h localhost -U user -d dbname -t -A -c "select field1, field2 from tname" > report.csv
 psql -h localhost -U user -d dbname -q -A -f script.sql > report.csv
 psql -h localhost -U user -d dbname -q -A -f script.sql -o report.csv 
 
--- Dump to SQL Inserts 
+# Dump to SQL Inserts 
 pg_dump -h localhost -p 5432 -U user -W --table="table-name" --data-only --column-inserts database-name -f table.sql
 
--- Tip - set PG passw (useful for bash scripts)
+# Tip - set PG passw (useful for bash scripts)
 export PGPASSWORD="pgpassw"
 ```
 
