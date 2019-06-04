@@ -28,6 +28,12 @@ apt-get install fonts-roboto
 # mucommander
 http://apt.mucommander.com/
 
+# nvidia
+nvidia-uninstall
+apt-get remove --purge '^nvidia-.*'
+apt-get purge nvidia-driver
+apt-get install nvidia-driver
+
 # mpv player
 vim ~/.config/mpv/mpv.conf
 vim ~/.config/mpv/input.conf
