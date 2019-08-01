@@ -8,12 +8,14 @@ rustc
 
 ## cargo
 cargo new hello_world --bin
+cargo --init [--bin --lib]
 
 cd hello_world
-cargo build
+cargo build [--release]
 cargo run
 cargo check
 cargo update
+cargo clean
 
 ## crates dependencies
 -- Edit Cargo.toml and add crates
