@@ -8,7 +8,7 @@ rustc
 
 ## cargo
 cargo new hello_world --bin
-cargo --init [--bin --lib]
+cargo init [--bin --lib]
 
 cd hello_world
 cargo build [--release]
