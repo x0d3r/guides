@@ -31,6 +31,7 @@ set tabstop=4
 set expandtab
 
 " Auto indent pasted text
+set paste
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
