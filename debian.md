@@ -23,7 +23,7 @@ mount /dev/sr0 /media/cdrom -t iso9660
 sh /media/cdrom/VBoxLinuxAdditions.run
 
 # Fonts
-apt-get install fonts-roboto
+apt-get install fonts-roboto fonts-dejavu fonts-inconsolata ttf-anonymous-pro 
 
 # mucommander
 http://apt.mucommander.com/
