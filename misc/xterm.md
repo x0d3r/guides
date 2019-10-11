@@ -1,14 +1,20 @@
-## Use a truetype font and size.
+# Config 
+
+```shell
+# Use a truetype font and size.
 xterm*faceName: Monospace
 xterm*faceSize: 14
 
-## Merge changes
+# Merge changes
 xrdb -merge ~/.Xresources
 
-## After editing .Xdefaults it may be reloaded with:
+# After editing .Xdefaults it may be reloaded with:
 !xrdb -load ~/.Xdefaults
 
+```
+
 ## Config
+```shell
 xterm*VT100*geometry: 94x28
 xterm*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
 xterm*background: black
@@ -25,3 +31,4 @@ xterm*scrollKey: true
 xterm*alwaysUseMods: true
 xterm*metaSendsEscape: true
 xterm*utf8Title: true 
+```
