@@ -3,11 +3,15 @@
 ## Basic cmds
 
 ```shell
-kubectl get nodes
-kubectl get pods
+# Cluster 
+kubectl get cluster-info
+
+kubectl get no
+kubectl get po
+kubectl get rs
+kubectl get svc
 kubectl get deploy
 
-kubectl get svc
 kubectl delete svc intro
 
 kubectl apply -f app.yml
