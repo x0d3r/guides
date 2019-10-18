@@ -20,17 +20,21 @@ xterm*faceName: Monaco
 xterm*faceSize: 12
 xterm*font: -misc-fixed-small-r-normal--20-200-75-75-c-100-iso8859-1
 xterm*background: black
-xterm*foreground: white
+xterm*foreground: grey
 xterm*loginShell: true
-xterm*scrollBar: true
 xterm*rightScrollBar: true
 xterm*title: XTerm
 xterm*iconName: XTerm
-xterm*saveLines: 5000
+xterm*saveLines: 50000
 xterm*jumpScroll: true
+xterm*selectToClipboard: true
+xterm*scrollBar: true
 xterm*scrollTtyOutput: false
 xterm*scrollKey: true
+XTerm*scaleHeight: 1.01
 xterm*alwaysUseMods: true
 xterm*metaSendsEscape: true
 xterm*utf8Title: true
+xterm*visualbell: true
+xterm*bellIsUrgent: true
 ```
