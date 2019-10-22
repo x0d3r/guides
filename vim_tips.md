@@ -7,6 +7,7 @@
 :set sw=2 ts=2 sts=2
 ```
 
+## Some useful cmds
 ```vim
 " Move line 
 dd -> v -> p
@@ -21,8 +22,8 @@ dd -> v -> p
 gg        " Go to start
 GG        " Go to end
 
-f<char>	-> forwards to char
-F<char>	-> backwards to char
+f<char>	  " forwards to char
+F<char>	  " backwards to char
 
 " Folding
 zR	" Open all folds
