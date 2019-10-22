@@ -1,4 +1,11 @@
-## Vim Tips
+# Vim Tips
+
+## inline config 
+```shell 
+:set number
+:set et
+:set sw=2 ts=2 sts=2
+```
 
 ```vim
 " Move line 
@@ -13,6 +20,9 @@ dd -> v -> p
 45 -> G   " Go to line
 gg        " Go to start
 GG        " Go to end
+
+f<char>	-> forwards to char
+F<char>	-> backwards to char
 
 " Folding
 zR	" Open all folds
