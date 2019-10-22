@@ -4,7 +4,7 @@
 ```shell
 no	->	nodes
 po 	-> 	pods
-svc -> 	services
+svc   -> 	services
 rs 	->	replicasets
 de	->	deployments
 ns	->	namespaces
@@ -62,10 +62,11 @@ kubectl get logs
 ```
 
 ## Basic yaml definition
-```shell
-apiVersion: v1
-kind:
+```yaml
+apiVersion: [v1 | apps/v1]
+kind: [Pod | ReplicaSet | Deployment]
 metadata:
+  name: oname
 spec:
 ```
 
