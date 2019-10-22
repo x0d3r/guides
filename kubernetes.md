@@ -1,26 +1,75 @@
 # Kubernetes
 
-## Basic cmds
-
+## Main Objects abbr
 ```shell
-# Cluster 
-kubectl get cluster-info
+no	->	nodes
+po 	-> 	pods
+svc -> 	services
+rs 	->	replicasets
+de	->	deployments
+ns	->	namespaces
 
-kubectl get no
-kubectl get po
-kubectl get rs
-kubectl get svc
-kubectl get deploy
+ing	->	ingress
+se  -> 	secrets
+cm	->	config maps
+pv	->	persistent volumes
+pvc -> 	persistent volumes claim
 
-kubectl delete svc intro
-
-kubectl apply -f app.yml
-kubectl describe deploy msb-intro
-kubectl delete deploy msb-intro nginx
+ds	->	daemon sets
+sa	->	service accounts
+ro	->	roles
+```
+## Cluster
+```shell
+kubectl cluster-info
+kubectl config
+kubectl config view
+kubectl top node
 ```
 
-## Example App spec 
+## Basic cmds
+```shell
+kubectl get all
+kubectl get [ob]
+kubectl get [ob] --all-namespaces
+kubectl get [ob] --show-labels
+kubectl get [ob] -o [wide | json | yaml]
 
+kubectl get [ob] [oname] -o yaml --export > ob-definition.yml
+kubectl describe [ob] [oname]
+kubectl edit [ob] [oname]
+kubectl delete [ob] [oname]
+```
+
+## Create objects
+```shell
+kubectl apply -f ob-definition.yml
+kubectl create -f ob-definition.yml
+kubectl run nginx --image=nginx --restart=Never -n mynamespace
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yml
+```
+
+## Scaling ReplicaSets
+```shell
+kubectl scale --replicas=6 rs/myapp-replicaset
+kubectl scale --replicas=6 -f rs-definition.yml
+```
+
+## Monitoring & Logging 
+```shell
+kubectl get events 
+kubectl get logs
+```
+
+## Basic yaml definition
+```shell
+apiVersion: v1
+kind:
+metadata:
+spec:
+```
+
+## Example Deployment definition
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
