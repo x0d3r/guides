@@ -1,6 +1,6 @@
 ```
 # VPN Providers
-https://mullvad.net/en/download/#android
+https://mullvad.net/
 https://protonvpn.com/
 https://www.ivpn.net/
 
