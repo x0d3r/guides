@@ -106,7 +106,8 @@ pg_dump
 pg_dumpall -U postgres -h localhost -p 5432 > dbbkp.dump
 
 # Restore from pg_dump file
-pg_restore -h localhost -U postgres -p 5432 -Fc -d postgres data.dump
+pg_restore -h localhost -p 5432 -U postgres -d postgres data.dump
+pg_restore -h localhost -p 5432 -U postgres -Fc -d postgres data.dump
 ```
 
 ## SQL 
