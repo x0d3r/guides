@@ -1,4 +1,4 @@
-## Misc Util cmds
+## Misc util cmds
 
 ```shell
 
