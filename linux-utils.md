@@ -23,4 +23,8 @@ df -Th
 # Ram Use
 free -h 
 
+# Check hdd 
+fsck -y /dev/sda
+e2fsck -p -c /dev/sda
+
 ```
