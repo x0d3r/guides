@@ -38,4 +38,20 @@ apt-get install nvidia-driver
 vim ~/.config/mpv/mpv.conf
 vim ~/.config/mpv/input.conf
 
+# Blacklist nouveau to install non-free nvidia driver
+
+# op1
+vim /etc/modprobe.d/blacklist-nouveau.conf
+
+blacklist nouveau
+options nouveau modeset=0
+
+update-initramfs -u
+reboot
+
+# op2
+Add nouveau.runpm=0 as a kernel option at boot editing Grub
+
+# Re-configure VMware Modules
+/usr/bin/vmware-modconfig --console --install-all
 ```
