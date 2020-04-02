@@ -29,4 +29,6 @@ e2fsck -p -c /dev/sda
 
 /sbin/fsck.ext4 -p /dev/sdb1
 
+# Convert flac to mp4 and increase volume
+ffmpeg -i "Clip 1" -af "volume=8dB" output.mp4
 ```
