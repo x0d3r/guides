@@ -27,4 +27,6 @@ free -h
 fsck -y /dev/sda
 e2fsck -p -c /dev/sda
 
+/sbin/fsck.ext4 -p /dev/sdb1
+
 ```
