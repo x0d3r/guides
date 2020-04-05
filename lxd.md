@@ -28,7 +28,7 @@ lxc [ start | stop | restart | info ] my-vm
 lxc config show my-vm
 lxc config set my-vm security.nesting true
 
-lxc rename  my-vm 
+lxc rename my-vm my-vm1 
 lxc copy my-vm my-vm2
 lxc delete my-vm 
 
