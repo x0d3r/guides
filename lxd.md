@@ -25,7 +25,7 @@ lxc exec my-vm bash
 lxc list 
 
 lxc [ start | stop | restart | info ] my-vm
-lxc config my-vm show
+lxc config show my-vm
 lxc config set my-vm security.nesting true
 
 lxc rename  my-vm 
