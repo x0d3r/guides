@@ -40,6 +40,10 @@ git commit --amend -m "Commit Message"	-- Rectifies a commit, by adding more fil
 git stash 		-- Put current changes into stash
 git stash pop	-- Apply stored stash content into working directory and clear stash
 git stash drop	-- Clear stash without applying it into working directory
+
+# Stop git tracking
+echo >>  "folder_path/"  >> .gitignore
+git rm -r --cached folder_path/
 ``` 
 
 ## Merge & Rebase
