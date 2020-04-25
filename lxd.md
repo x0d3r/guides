@@ -25,6 +25,11 @@ lxc image list
 lxc image list images:cent
 
 lxc launch images:centos/7 my-vm
+lxc launch ubuntu:14.04 my-vm \
+    -c security.privileged=true \
+    -c security.nesting=true \
+    -c linux.kernel_modules=ip_tables,ip6_tables,netlink_diag,nf_nat,overlay
+
 lxc exec my-vm bash
 
 lxc list 
@@ -32,7 +37,9 @@ lxc list
 lxc [ start | stop | restart | info ] my-vm
 lxc config show my-vm
 lxc config set my-vm security.nesting true
-
+lxc config set my-vm linux.kernel_modules overlay
+lxc config edit my-vm
+ 
 lxc rename my-vm my-vm1 
 lxc delete my-vm 
 ```
