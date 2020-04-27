@@ -5,8 +5,8 @@
 minikube start
 minikube start --driver=virtualbox --kubernetes-version=v1.13 --cpus=2 --memory=8g
 
+minikube pause
 minikube stop
-minikube delete
 
 # Info
 minikube status
@@ -16,6 +16,15 @@ minikube ip
 # Hands-on
 minikube dashboard
 minikube service hello-app
+
+# Addons
+minikube addons list
+minikube addons enable ingress
+
+# Maintenance
+minikube delete
+rm -rf /usr/local/bin/minikube
+rm -rf ~/.minikube .kube
 
 # Troubleshooting
 minikube logs
@@ -32,10 +41,12 @@ kubectl get nodes
 kubectl get nodes -o wide
 
 kubectl get pods
+kubectl get pods -n kube-system
 kubectl get pods --all-namespaces
 
-kubectl get deployments
-kubectl get services
+kubectl get deploy
+kubectl get svc
+kubectl get ing
 
 # Troubleshooting
 kubectl get events
