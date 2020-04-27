@@ -64,6 +64,8 @@ curl $(minikube service nginxapp --url)
 ## Resources
 https://minikube.sigs.k8s.io/docs/start/
 
+https://minikube.sigs.k8s.io/docs/handbook/
+
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 https://kubernetes.io/blog/
