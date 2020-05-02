@@ -50,9 +50,22 @@ apk del vim pkg2
 
 ## Installing Docker
 ```shell
+add openrc
 add docker
 rc-update add docker boot
+
+# Fix modules not found
+mkdir /lib/modules
+
+# Manually mount cgroup2
+mount -t cgroup2 cgroup2 /sys/fs/cgroup/
+cat /proc/self/mountinfo  | grep cgroup2 
+
 service docker start
+
+cat /var/log/docker.log | grep level=warning
+
+docker run hello-world
 
 # Isolate containers with a user namespace
 adduser -SDHs /sbin/nologin dockremap
@@ -76,3 +89,7 @@ https://wiki.alpinelinux.org/wiki/Docker#Installation
 https://github.com/moby/moby/issues/36016
 
 https://discuss.linuxcontainers.org/t/lxd-docker-ce-on-gentoo/4122/7
+
+https://github.com/opencontainers/runc/issues/2066
+
+
