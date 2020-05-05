@@ -5,7 +5,7 @@
 /etc/apt/sources.list add non-free
 
 apt-get update
-apt-get install ca-certificates apt-transport-https
+apt-get install apt-transport-https ca-certificates software-properties-common
 apt-get install build-esential git tmux vim mc
 apt-get install linux-headers-$(uname -r)
 
