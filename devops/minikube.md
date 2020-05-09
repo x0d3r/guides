@@ -5,12 +5,12 @@
 minikube start
 minikube start --driver=virtualbox --kubernetes-version=v1.13 --cpus=2 --memory=8g
 
-minikube pause
-minikube stop
+minikube [status stop pause]
 
 # Info
 minikube status
 minikube version
+minikube version --client
 minikube ip
 
 # Hands-on
