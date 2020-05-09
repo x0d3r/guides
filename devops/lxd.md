@@ -37,6 +37,7 @@ lxc list
 lxc [ start | stop | restart | info ] my-vm
 lxc config show my-vm
 lxc config set my-vm security.nesting true
+lxc config set my-vm security.privileged true
 lxc config set my-vm linux.kernel_modules overlay
 lxc config edit my-vm
  
