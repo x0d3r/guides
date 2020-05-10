@@ -11,8 +11,11 @@ set et
 set sw=2 ts=2 sts=2
 ```
 
-## Some useful cmds
+## Useful cmds
 ```vim
+" show config
+set 
+
 " Move line 
 dd -> v -> p
 
