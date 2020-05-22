@@ -103,3 +103,7 @@ https://lxd.readthedocs.io/en/latest/
 https://wiki.gentoo.org/wiki/LXD
 
 http://bluebliss.co.za/?p=19
+
+https://blog.simos.info/running-x11-software-in-lxd-containers/
+
+https://medium.com/@tcij1013/lxc-lxd-cheetsheet-effb5389922d
