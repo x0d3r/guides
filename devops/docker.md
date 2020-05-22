@@ -21,6 +21,17 @@ docker image ls
 docker image rm hashID
 docker image rm name
 
+# Networking
+docker network ls
+docker network inspect <network-id>
+
+docker network create my-app ---driver bridge
+docker network connet my-app <container-id>
+docker network disconnet my-app <container-id>
+
+# Networking DNS
+-- Docker defaults the hostname to containers name
+
 # Logs
 docker container logs hashID
 
