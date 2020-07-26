@@ -33,3 +33,11 @@ kubectl get all
 ```sh
 /usr/local/bin/k3s-uninstall.sh
 ```
+
+### Resources
+
+https://github.com/rancher/k3s
+
+https://medium.com/@moep_moep/k3s-bootstrap-on-alpine-linux-c207c85c3f3d
+
+
