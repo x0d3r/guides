@@ -14,8 +14,11 @@ EOF
 systemctl restart networking.service
 
 # Edit configmap, set strictARP: true 
+```bash
 kubectl edit configmap -n kube-system kube-proxy
+```
 
+```yaml
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
 mode: "ipvs"
@@ -24,7 +27,7 @@ ipvs:
 ```
 
 ### Installation
-``` bash
+```bash
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/namespace.yaml
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/metallb.yaml
 
@@ -33,8 +36,11 @@ kubectl create secret generic -n metallb-system memberlist --from-literal=secret
 ```
 
 ### Configuration
-```yaml
+```bash
 cat <<EOF |kubectl apply -f-
+```
+
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
