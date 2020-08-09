@@ -14,7 +14,6 @@ EOF
 systemctl restart networking.service
 
 # Edit configmap, set strictARP: true 
-```bash
 kubectl edit configmap -n kube-system kube-proxy
 ```
 
