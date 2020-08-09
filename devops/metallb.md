@@ -16,7 +16,6 @@ systemctl restart networking.service
 # Edit configmap, set strictARP: true 
 kubectl edit configmap -n kube-system kube-proxy
 ```
-
 ```yaml
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
