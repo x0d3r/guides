@@ -37,11 +37,11 @@ kubeadm init \
   --apiserver-cert-extra-sans <10.0.0.1> \
   --kubernetes-version=v1.18.5 
 
-# Deploy calico network
-kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
-
 # Workers generate join command
 kubeadm token create --print-join-command
+
+# Deploy calico network
+kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
 ```
 
 ### Workers
