@@ -17,7 +17,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
 
-sudo sysctl --system
+sysctl --system
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
@@ -32,7 +32,7 @@ kubeadm config images pull
 
 kubeadm init \
   --apiserver-advertise-address=10.98.0.2 \ 
-  --pod-network-cidr=10.98.0.0/16 \
+  --pod-network-cidr=10.244.0.0/16 \
   --ignore-preflight-errors=NumCPU \
   --apiserver-cert-extra-sans <10.0.0.1> \
   --kubernetes-version=v1.18.5 
