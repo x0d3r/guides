@@ -15,11 +15,12 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 helm repo update
 
-helm search repo superset
+helm search repo nginx
 
 helm list
 
-helm install name stable/nginx
+helm inspect values stable/nginx > /tmp/nginx.values
+helm install www stable/nginx --values /tmp/nginx.values
 
 helm delete name
 ```
