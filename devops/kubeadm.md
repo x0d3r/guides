@@ -22,7 +22,7 @@ sysctl --system
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
 
-apt-get update && apt-get install -y kubelet kubeadm kubectl
+apt-get update && apt-get install -y kubelet=1.18.8-00 kubectl=1.18.8-00 kubeadm=1.18.8-00
 apt-mark hold kubelet kubeadm kubectl
 
 systemctl daemon-reload
@@ -32,10 +32,10 @@ kubeadm config images pull
 
 kubeadm init \
   --apiserver-advertise-address=10.98.0.2 \ 
-  --pod-network-cidr=192.168.0.0/16
+  --pod-network-cidr=192.168.0.0/16 \
   --ignore-preflight-errors=NumCPU \
   --apiserver-cert-extra-sans <10.0.0.1> \
-  --kubernetes-version=v1.18.5 
+  --kubernetes-version=v1.18.8
 
 # Workers generate join command
 kubeadm token create --print-join-command
