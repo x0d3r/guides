@@ -32,7 +32,7 @@ kubeadm config images pull
 
 kubeadm init \
   --apiserver-advertise-address=10.98.0.2 \ 
-  --pod-network-cidr=10.244.0.0/16 \
+  --pod-network-cidr=192.168.0.0/16
   --ignore-preflight-errors=NumCPU \
   --apiserver-cert-extra-sans <10.0.0.1> \
   --kubernetes-version=v1.18.5 
@@ -41,7 +41,8 @@ kubeadm init \
 kubeadm token create --print-join-command
 
 # Deploy calico network
-kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
+kubectl create -f https://docs.projectcalico.org/manifests/custom-resources.yaml
 ```
 
 ### Workers
