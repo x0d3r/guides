@@ -10,8 +10,7 @@ apt-get install build-esential git tmux vim mc
 apt-get install linux-headers-$(uname -r)
 
 apt-get install zip unzip unrar gdebi gdebi-core
-apt-get install htop mplayer mpv terminator
-apt-get install geany geany-plugins
+apt-get install htop mplayer mpv
 
 # Optional 
 apt-get install module-assistant
@@ -28,15 +27,20 @@ apt-get install fonts-roboto fonts-dejavu fonts-inconsolata ttf-anonymous-pro
 # mucommander
 http://apt.mucommander.com/
 
-# nvidia
+# mpv player
+vim ~/.config/mpv/mpv.conf
+vim ~/.config/mpv/input.conf
+
+# Re-configure VMware Modules
+/usr/bin/vmware-modconfig --console --install-all
+```
+
+### nvidia
+```shell
 nvidia-uninstall
 apt-get remove --purge '^nvidia-.*'
 apt-get purge nvidia-driver
 apt-get install nvidia-driver
-
-# mpv player
-vim ~/.config/mpv/mpv.conf
-vim ~/.config/mpv/input.conf
 
 # Blacklist nouveau to install non-free nvidia driver
 
@@ -51,7 +55,11 @@ reboot
 
 # op2
 Add nouveau.runpm=0 as a kernel option at boot editing Grub
+```
 
-# Re-configure VMware Modules
-/usr/bin/vmware-modconfig --console --install-all
+### Troubleshooting
+```
+systemd-analyze
+dmesg
+dmesg | grep /dev/...
 ```
