@@ -60,6 +60,8 @@ Add nouveau.runpm=0 as a kernel option at boot editing Grub
 ### Troubleshooting
 ```
 systemd-analyze
+systemd-analyze blame
+
 dmesg
 dmesg | grep /dev/...
 ```
