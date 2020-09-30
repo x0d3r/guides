@@ -18,3 +18,5 @@ systemctl daemon-reload
 
 docker -v
 containerd -v
+
+usermod -aG docker $USER
