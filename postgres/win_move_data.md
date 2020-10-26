@@ -31,5 +31,18 @@ as List folder contents permissions.
 6. Restart the Service
 ```
 
+## Net Services
+```
+net stop postgresql-x64-9.6
+
+pg_ctl unregister -N postgresql-x64-9.6
+pg_ctl register -N postgres -D c:\new\path\to\datadir
+
+net start postgresql-x64-9.6
+
+psql -U postgres
+show data_directory;
+```
+
 ## Resources
 https://radumas.info/blog/tutorial/2016/08/08/Migrating-PostgreSQL-Data-Directory-Windows.html
