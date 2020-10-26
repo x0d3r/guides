@@ -1,4 +1,4 @@
-# PostgreSQL Guide
+# PostgreSQL Basics Guide
 
 ## Clean install
 ```shell
