@@ -5,7 +5,8 @@
 syntax on
 set smartindent 
 set autoindent
-
+set paste
+  
 set number
 set et
 set sw=2 ts=2 sts=2
@@ -21,8 +22,9 @@ dd -> v -> p
 
 " Replace content
 :%s/foo/bar/g 	  " all lines
-:s/foo/bar/g	  " current line
+:s/foo/bar/g	    " current line
 :%s/foo/bar/gc 	  " each line with confirmation
+:%s/\t/ /g        " replace tabs with spaces
 
 " Moving
 45 -> G   " Go to line
