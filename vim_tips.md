@@ -22,7 +22,7 @@ dd -> v -> p
 
 " Replace content
 :%s/foo/bar/g 	  " all lines
-:s/foo/bar/g	    " current line
+:s/foo/bar/g	 " current line
 :%s/foo/bar/gc 	  " each line with confirmation
 :%s/\t/ /g        " replace tabs with spaces
 
