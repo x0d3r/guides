@@ -37,6 +37,11 @@ GG        " Go to end
 f<char>	  " forwards to char
 F<char>	  " backwards to char
 
+" Indenting
+shift + > " Indent to right
+shift + < " Indent to left
+.         " repeat
+
 " Folding
 zR	" Open all folds
 zM	" Close all folds
@@ -51,13 +56,13 @@ d$	 " delete until end of line
 D	 " delete until end of line
 d0 	 " delete to beginning of line
 
-dw   	" delete word
-diw  	" delete inside word
-daw	" delete around the word (includes space before the next word)
+dw   	 " delete word
+diw  	 " delete inside word
+daw	 " delete around the word (includes space before the next word)
 
-dt<char  " deletes from cursor o specified char
-daw 	   " delete the word under the cursor
-caw	    " delete the word under the cursor and put you in insert mode
+dt<char>  " deletes from cursor o specified char
+daw 	 " delete the word under the cursor
+caw	 " delete the word under the cursor and put you in insert mode
 ```
 
 ## Resources
