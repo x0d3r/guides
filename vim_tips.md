@@ -25,6 +25,10 @@ dd -> v -> p
 :%s/foo/bar/gc 	  " each line with confirmation
 :%s/\t/ /g        " replace tabs with spaces
 
+" Show all chars
+:set list
+:set nolist
+
 " Moving
 45 -> G   " Go to line
 gg        " Go to start
@@ -40,12 +44,12 @@ zo	" Open fold under current cursor
 zc	" Close fold under current cursor
 
 " Deleting
-x 	  " delete current char
-dd	  " delete current line
-5dd	  " delete five lines
-d$	  " delete until end of line
-D	    " delete until end of line
-d0 	  " delete to beginning of line
+x 	 " delete current char
+dd	 " delete current line
+5dd	 " delete five lines
+d$	 " delete until end of line
+D	   " delete until end of line
+d0 	 " delete to beginning of line
 
 dw   	" delete word
 diw  	" delete inside word
