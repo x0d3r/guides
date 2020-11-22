@@ -2,12 +2,10 @@
 
 ## fast .vimrc config
 ```shell 
+" sets tabstop=2 softtabstop=2 shiftwidth=2 number, autoindent, smartindent nowrap
+
 syntax on
-set smartindent 
-set autoindent
-set paste
-set nowrap  
-set ts=2 sw=2 sts=2 et nu 
+set ts=2 sw=2 sts=2 nu ai si et nowrap 
 set pastetoggle=<F2>
 ```
 
