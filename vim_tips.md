@@ -48,15 +48,15 @@ x 	 " delete current char
 dd	 " delete current line
 5dd	 " delete five lines
 d$	 " delete until end of line
-D	   " delete until end of line
+D	 " delete until end of line
 d0 	 " delete to beginning of line
 
 dw   	" delete word
 diw  	" delete inside word
-daw	  " delete around the word (includes space before the next word)
+daw	" delete around the word (includes space before the next word)
 
-dt<char   " deletes from cursor o specified char
-daw 	    " delete the word under the cursor
+dt<char  " deletes from cursor o specified char
+daw 	   " delete the word under the cursor
 caw	    " delete the word under the cursor and put you in insert mode
 ```
 
