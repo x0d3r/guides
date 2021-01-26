@@ -19,7 +19,7 @@ modprobe br_netfilter
 sudo sysctl --system
 ```
 
-### Docker setup (Soon to be deprecated on k8s v1.23)
+### Docker setup (To be deprecated on k8s v1.23)
 ```sh
 apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
@@ -88,8 +88,8 @@ kubectl cluster-info
 kubectl get no
 kubectl get cs
 
-kubectl create deploy nginx --image nginx
-kubectl expose deploy nginx --port 80 --type NodePort
+kubectl create deploy nginx --image=nginx --replicas=9
+kubectl expose deploy nginx --port=80 --type=NodePort
 
 kubectl get all
 ```
