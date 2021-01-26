@@ -19,7 +19,7 @@ modprobe br_netfilter
 sudo sysctl --system
 ```
 
-### Docker setup
+### Docker setup (Soon to be deprecated on k8s v1.23)
 ```sh
 apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
@@ -32,12 +32,26 @@ apt-get update && apt-get install -y \
   docker-ce-cli=5:19.03.11~3-0~debian-$(lsb_release -cs)
 ```
 
+### Containerd setup
+```sh
+apt-get install -qq -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+
+apt-get update -qq && apt-get install -y containerd.io
+
+mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml
+systemctl restart containerd
+```
+
 ### Kubeadm setup
 ```sh
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
 
-apt-get update && apt-get install -y kubelet=1.18.15-00 kubectl=1.18.15-00 kubeadm=1.18.15-00
+apt-get update -qq && apt-get install -qq -y kubelet=1.18.15-00 kubectl=1.18.15-00 kubeadm=1.18.15-00
 apt-mark hold kubelet kubeadm kubectl
 
 systemctl daemon-reload
