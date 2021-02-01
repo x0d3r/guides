@@ -70,8 +70,7 @@ kubeadm init \
 kubeadm token create --print-join-command
 
 # Deploy calico network
-kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
-kubectl create -f https://docs.projectcalico.org/manifests/custom-resources.yaml
+kubectl create -f https://docs.projectcalico.org/v3.16/manifests/calico.yaml
 
 # Deploy flannel network addon 
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
