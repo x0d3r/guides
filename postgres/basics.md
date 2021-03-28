@@ -63,10 +63,21 @@ show all;
 \l+		-- databases
 \dn+		-- schemas
 \dt		-- tables
-\dfd		-- functions
-\ds		-- sequences
+\dt+ pro.*      -- tables on schema pro
+\d+ pro.user    -- describe table pro.users
+\dv		-- views
+\df		-- functions
+\dx		-- extensions
+\ds+ *.*	-- all sequences 
+\s              -- show cmd history
+\s histx        -- save history to a file
 \q		-- quit
-\password user		-- change passwd
+\i script.sql   -- run file
+\password user	-- change passwd
+\?		-- list available commands
+\h              -- list SQL commands
+\h delete       -- describe SQL delete command
+
 ```
 
 ## Cluster 
@@ -130,6 +141,10 @@ ORDER BY table_schema,table_name;
 ```
 
 ## Resources
+https://gist.github.com/apolloclark/ea5466d5929e63043dcf
+
+https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
+
 https://www.postgresql.org/docs/11/datatype.html
 
 https://www.postgresql.org/docs/11/sql-createtable.html
