@@ -10,6 +10,9 @@ mount -o loop Image.iso /media/iso
 # Create an ISO image from CD/DVD
 dd if=/dev/sr0/ of=/home/x0d3r/Downloads/winxp.iso
 
+# Create Bootable USB 
+dd if=/media/x0d3r/k8s/debian-11.0.0-amd64-netinst.iso of=/dev/sdb conv=fdatasync status=progress bs=4M 
+
 # HDD TEMP
 hddtemp /dev/sda
 hddtemp /dev/sdb
